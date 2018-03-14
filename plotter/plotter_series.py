@@ -3,7 +3,6 @@ import matplotlib.colors as colors
 from mpl_toolkits.basemap import Basemap
 import numpy as np
 import pickle
-from PIL import image
  
 plt.figure(figsize=(12,8))
 
