@@ -11,13 +11,13 @@ grbs=pygrib.open(grib)
  
 grb = grbs.select(name='Temperature')[0]
 data=grb.values
-print data.shape
-print max(data[0] - 273.15)
-print min(data[0] - 273.15)
+print(data.shape)
+print(max(data[0] - 273.15))
+print(min(data[0] - 273.15))
 
 lat,lon = grb.latlons() # Set the names of the latitude and longitude variables in your input GRIB file
-print len(lat)
-print len(lon)
+print(len(lat))
+print(len(lon))
  
 
 # BIG 
