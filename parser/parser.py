@@ -1,3 +1,5 @@
+# DEPRECEATED - SHOULD NOT USE
+
 from os import walk
 import pygrib
 import numpy as np
@@ -35,7 +37,7 @@ def get_all_files(source_path, filename):
     return f
 
 # should be in main? nah.
-filename = filename3
+filename = filename2
 
 file_names = get_all_files(source_path=source_path, filename=filename)
 file_names.sort()
@@ -51,6 +53,8 @@ for f in full_filepaths:
     for p in params:
         try:
             grb = mf.select(name=p)
+
+            print 'From: ' + str(grb[0]['date']) + '.. To: ' + str(grb[-1]['date'])
         except:
             continue
         month, _ = grb_to_grid(grb)
