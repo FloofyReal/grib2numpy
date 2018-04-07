@@ -3,8 +3,8 @@ import pygrib
 import numpy as np
 import cPickle as pickle
 
-source_path = '/home/floofy/DP/data/ECMWF/TEST/'
-end_path = '/home/floofy/DP/data/ECMWF/TEST/'
+source_path = '/home/floofy/DP/data/ECMWF/'
+end_path = '/home/floofy/DP/data/ECMWF/'
 filename1 = '131x151'
 filename2 = '64x64'
 filename3 = '32x32'
