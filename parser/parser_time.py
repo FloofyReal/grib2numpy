@@ -4,12 +4,12 @@ import numpy as np
 import cPickle as pickle
 
 source_path = '/home/floofy/DP/data/ECMWF/'
-end_path = '/home/floofy/DP/data/ECMWF/'
+end_path = '/home/floofy/DP/data/ECMWF/PARSED/'
 filename1 = '131x151'
 filename2 = '64x64'
 filename3 = '32x32'
 # params = ['Temperature']
-params = ['Temperature','Specific humidity', 'Cloud cover']
+params = ['Cloud cover']
 params_more2 = ['Geopotential', 'Logarithm of surface pressure']
 params_more3 = ['U component of wind', 'V component of wind']
 
