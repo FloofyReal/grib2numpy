@@ -37,8 +37,8 @@ def get_all_files(source_path, filename):
     return f
 
 # MAIN CHANGEABLES
-experiment_name = '32x32_temp_final_v1'
-batch_size = 1
+experiment_name = '32x32_temp_resize'
+batch_size = 3
 lat_path = './lats_32x32.pkl'
 lon_path = './lons_32x32.pkl'
 
@@ -63,6 +63,8 @@ for file in file_names:
         futu.append(source_path + filename + file)
     elif 'image' in file:
         orig.append(source_path + filename + file)
+
+print(futu, orig)
 
 print('BEGIN')
 counter = 0
