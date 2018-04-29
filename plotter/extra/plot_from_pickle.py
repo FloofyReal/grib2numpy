@@ -9,15 +9,15 @@ import os
 plt.figure(figsize=(12,8))
 
 # choose size to plot
-size = '64x64'
-# size = '32x32'
+# size = '64x64'
+size = '32x32'
 
 # path to dataset
-path_t = '../../../../../../experiments/data_parsed/' + size + '/Temperature.pkl'
-path_sh = '../../../../../../experiments/data_parsed/' + size + '/Specific_humidity.pkl'
-path_cc = '../../../../../../experiments/data_parsed/' + size + '/Cloud_cover.pkl'
-path_sp = '../../../../../../experiments/data_parsed/' + size + '/Logarithm_of_surface_pressure.pkl'
-path_geo = '../../../../../../experiments/data_parsed/' + size + '/Geopotential.pkl'
+path_t = '../../data_parsed/' + size + '/Temperature.pkl'
+path_sh = '../../data_parsed/' + size + '/Specific_humidity.pkl'
+path_cc = '../../data_parsed/' + size + '/Cloud_cover.pkl'
+path_sp = '../../data_parsed/' + size + '/Logarithm_of_surface_pressure.pkl'
+path_geo = '../../data_parsed/' + size + '/Geopotential.pkl'
 
 # path to longitutes and latitudes for plotting
 lat_path = './lats_' + size + '.pkl'
