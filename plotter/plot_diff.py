@@ -38,7 +38,8 @@ def get_all_files(source_path, filename):
     return f
 
 # MAIN CHANGEABLES
-experiment_name = 'test'
+experiment_name = 'train_allwvars_32x32_10years_800epochs_lr-0001_v2'
+# experiment_name = 'test'
 lat_path = './lats_32x32.pkl'
 lon_path = './lons_32x32.pkl'
 
@@ -51,7 +52,7 @@ source_path = './experiments_samples/' + experiment_name + '/'
 filename = ''
 endfile = 'diffs/'
 
-path = source_path + filename + endfile
+path = source_path + endfile
 if not os.path.exists(path):
     os.mkdir(path)
 
@@ -69,14 +70,18 @@ counter = 0
 for diff in diffs:
     # LOAD DIFF
     data = unpickle(diff)
-    data = np.abs(data)
-    data = data.reshape([32,32])
+    try:
+        data = np.abs(data)
+        data = data.reshape([32,32])
+    except:
+        continue
 
     # get name from path
-    name = diff.split('.')[1].split('_')[2:]
+    name = diff.split('.')[1].split('/')[-1].split('_')[2:]
     title = ' '.join(name)
     name = '_'.join(name)
     print('plotting:', title)
+    print('name:',name)
 
     fig = plt.figure(dpi=500)
 
@@ -92,6 +97,8 @@ for diff in diffs:
     plt.colorbar(pad=0.10, label='Error')
 
     superendpath = source_path + endfile + name + '.png'
+
+    print(superendpath)
     plt.savefig(superendpath, bbox_inches = "tight") # Set the output file name
     print('Saved pic ' + superendpath)
     plt.close(fig)
